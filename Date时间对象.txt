@@ -1,0 +1,20 @@
+Date时间对象
+
+new Date()				//获取当前日期和时间
+new Date(1603097189245)			//获取时间戳当时的日期和时间(从1970年1月1日08:00至今的毫秒数)
+new Date("Mon Oct 19 2020 16:46:53 GMT+0800")	//获取时间字符串中的日期和时间
+
+日期的常用方法:
+getFullYear()	从Date对象以四位数字返回年份
+getMonth()	从Date对象返回月份(0~11)
+getDate()		从Date对象返回日(0-31)
+getHours()	从Date对象返回时(0-23)
+getMinutes()	从Date对象返回分(0-59)
+getSeconds()	从Date对象返回秒(0-59)
+getMilliseconds()	从Date对象返回毫秒(0-999)
+getDay()		从Date对象返回星期
+getTime()		从1970年到Date的时间戳
+
+以上每个方法都有一个对应的set方法，用来设置对应的值
+
+toLocaleString()	将日期对象，转换为本地格式字符串

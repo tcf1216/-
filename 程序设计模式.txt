@@ -1,0 +1,77 @@
+程序设计模式
+	1.面向过程（函数）
+	即面向细节，面向函数来实现需求，其关注点为“做什么”
+	
+	2.面向对象（OOP）
+	面向对象关注的是“谁来做”，而这个“谁”就是一个对象，具体怎么做交给它
+	
+	3.举例
+	面向过程：吃
+	面向对象：谁吃
+
+	4.面向对象的应用场景
+	一般而言，小项目用面向过程，因为敏捷快速直接
+	大项目用面向对象，因为关系清晰，维护简单
+
+	instanceof操作符
+	用于检测对象是否为指定类的实例
+	console.log(p instanceof Person)	//true	p是Person类的实例
+	console.log(p instanceof Person)	//true	p是Object类的实例，Object是p的最顶层
+	console.log(p instanceof Number)	//false
+
+
+对象的属性和方法
+	类中的变量，称之为“属性”
+	类中的函数，称之为“方法”
+
+	私有成员
+		也称为类的成员，只能被类自身使用
+		var_name=name		//使用var关键字声明，而不用this指向（私有）
+		function_walk(){}		//直接创建函数，而不用this指向，并在方法名前加下划线（私有）
+
+	静态成员
+		JavaScript中遵循一切皆为对象的原则，name函数本身也可视为对象，可直接对其动态添加属性，而这些添加到函数
+		本身的属性和方法被称为“静态成员”，静态成员可不用实例化，直接访问
+		Person.type= ‘black’
+		console.log(Person.type)		//black
+
+	getter和setter
+		设置只读属性和只写属性
+		//只读
+		function Person(value){
+		//设置私有成员_age
+		var _age = value;
+		//设置age只读
+		this._defineGetter__("age", function() {		//这里的“age”为实例对象使用的键值
+			return _age	//将age返回出去
+			})
+		}
+		var p = new Person("'Isj')
+		console.log(p)
+		p.age = 'jsl'
+		console.log(p)
+
+		//只写
+		function Person() {
+		var _age = 'lsj';
+		//只写
+		this.__defineSetter__("age", function(value){
+			_age = value
+			console.log(_age)	//wy
+		})
+	}
+		var p = new Person()p.age = 'wy'
+		console.log(p.age)
+		console.log(p)
+		p.age = 'jsl'console.log(p)
+
+引用类型
+	引用类型，有对象、数组、函数。值大小不固定，栈内存中存放地址，指向堆内存中的对象。是按引用访问的。
+
+	基本类型变量的复制:从一个变量向另一个变量复制时，会在栈中创建一个新值，然后把值复制到新变量分配的位置上
+	引用类型变量的复制:复制的是存储在栈内存中的指针，将指针复制到栈中为新变量分配的空间中，而这个和指针副本和原指针指向的是同一个对象
+	基本类型string,number等，作比较是通过值来比较
+	引用类型是通过栈内存中的指针地址来作比较
+
+prototype和__proto__
+		

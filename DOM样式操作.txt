@@ -1,0 +1,57 @@
+DOM样式操作
+
+style属性
+	 element.style.width=‘1000px’
+	注意：该属性的值应使用驼峰式命名：box.style.fontSize
+
+style.cssText属性
+	 element.style.cssText=‘width：1000px；height：100px’
+	注意：它可以连续设置多个样式，但是会覆盖之前的行内样式！
+
+className属性
+	element.className = "box redBack"
+classList属性
+	增加: element.classList.add(class1,class2,class3,....)
+	删除:element.classList.remove(class1,class2,class3...)
+	判断: element.classList.contains(class)
+	切换:element.classList.toggle(class , true|false)		//原来有就会被删掉该class，原来没有则会添加该class，如果设置了第二个参数，那么true为强制添加，false为强制删除
+
+window.getComputedStyle()
+	window.getComputedStyle(element,pseudoElt | null)
+	element：需要计算样式的目标元素
+	pseudoElton：指定一个伪元素进行匹配，对于常规元素来说，可以省略，如“:after”
+	作用：获取元素最终使用的样式
+	由于这个方法IE9以下不支持，IE低版本有自己类似的方式：currentStyle
+currentStyle
+	element.currentStyle
+	IE低版本独有的属性
+	作用：获取元素最终使用的样式
+
+兼容其他浏览器和IE低版本浏览器的方式:
+var left = window.getComputedStyle(box[0])?window.getComputedStyle(box[0]).left : box[0].currentStyle.left
+
+其他元素属性:
+	clientWidth，clientHeight
+	返回元素内容的可视宽度和高度（不包括边框和滚动条）
+	
+	offsetWidth，offsetHeight
+	返回元素的实际宽度和高度（包括边框个滚动条）
+
+	offsetTop，offsetLeft
+	返回元素相对父级的水平、垂直的偏移量（前提是父级有设置position：relative，否则是相对body）
+
+	offsetParent
+	返回元素的偏移容器（相对谁偏移）
+
+	scrollTop，scrollLeft
+	返回滚动条的纵向/横向滚动距离（有滚动条的元素）
+	当获取页面的滚动高度时，chremo需要获取body元素的滚动距离，IE及火狐需要根据根元素的HTML滚动距离
+	兼容写法：var top = document.body.scrollTop || document.documentElement.scrollTop
+
+window对象属性
+	window.innerWidth，window.innerHeight
+	浏览器窗口显示网页内容的区域大小（如打开F12控制台窗口，则这部分会被减掉）
+
+	window.outerWidth,window.outerHeight
+	浏览器显示网页内容的整个窗口大小（无论F12控制台是否打开，都会包括这部分尺寸）
+	IE8以下不支持

@@ -1,0 +1,6 @@
+forEach
+forEach是专门为遍历数组而生的，众所周知for循环可以用来遍历数组，是因为我们可以遍历for循环的初始值是0（数组下标从0开始），遍历到数组长度结束，刚好数组中的每一个元素都可以执行一遍，所以可以遍历数组，而forEach是专门为遍历数组而生的，它只需要：
+	数组名。forEach（function（item，index））{
+		console.log（‘当前遍历的数组元素：’，item）
+		console.log（‘当前遍历的数组下标：’，index）
+	}）

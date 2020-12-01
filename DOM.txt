@@ -1,0 +1,51 @@
+ 文档对象模型（DOM）
+浏览器中，每一个窗口都对应一个JavaScript的window对象，而每一个window对象都包含一个document属性，其对应HTML文档，表示整个窗口下网页的内容
+
+DOM节点类型
+                其一，包含所有的标签、文本、注释的类型。用“节点类型（Node）”表示
+                其二，只包含标签的类型，用“元素类型（Element）”表示
+
+获取节点
+        根据标签名获取节点
+        document.getElementsByTagName('p')
+        根据类名获取节点
+        document.getElementsByClassName('myp')
+        根据id获取节点
+        document.getElementById('sp')
+       根据name获取节点
+        document.getElementsByName('pp')
+
+标签的属性操作：
+                    根据属性名获取属性值            例:节点.getAttribute("属性名")    返回属性值
+                            getAttribute()
+                    修改属性值
+                            setAttribute()                例:节点.setAttribute("属性名","属性值")
+                    删除属性值
+                            removeAttribute()        例:节点.removeAttribute("属性值")
+
+修改元素内容：
+                    返回或设置某某元素的内容(包含HTML标签)
+                                            innerHTML
+                    返回或设置某某元素的内容(只包含文本)
+                                            innerTest
+                    设置节点的内容(节点本身也会被替换)
+                                            outerHTML
+                    获取和设置input的value值
+                                            节点.value
+                    获取和设置input复选框和单选框的值
+                                            节点.checkd
+                                            节点.radio
+
+创建节点
+        创建标签节点
+                document.createElement("tagName")
+        创建文本节点
+                document.createTextNode("text")
+
+插入节点
+                插入新节点至节点内部的最后面:
+                                节点.append(新节点)
+
+删除节点
+                节点.remove()
+        

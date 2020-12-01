@@ -1,0 +1,31 @@
+Number数值对象
+javaScript中，数字不分整型和浮点型，Number类型包含了整型和浮点型，且可以灵活运用
+
+Number的范围：
+	JavaScript所能表示的数字范围，为正负1.7976931348623157乘以10的308次方，
+	其最小所能表示的小数为正负5乘以10的负324次方，
+	这两个边界值都可以分别通过访问Number对象的MAX_VALUE属性和MIN_VALUE来获取
+
+Number的常用方法：
+	a.toFixed(小数位数)		转换为指定位数小数的数值，结果会四舍五入
+	a.toString(进制）		转换为指定进制的数值字符串（2，8，10， 16）
+
+算数对象（Math）
+Math(算数)对象的作用是：执行常见的算数运算任务
+Math对象提供给多种算数值类型和函数，无需再使用这个对象之前进行实例化
+
+Math对象的常用属性：
+	Math.PI		返回圆周率
+
+Math对象的常用方法：
+	Math.round()	将小数四舍五入成整数
+	Math.max(a,b)	返回两个给定的数中较大的数
+	Math.min(a,b)	返回两个给定的数中较小的数
+	Math.floor()	对数进行向下取整
+	Math.ceil()	对数进行向上取整
+	Math.pow(x,y)	返回x的y次幂
+	Math.sqrt(x)	返回x的平方根
+	Math.abs(x)	返回x的绝对值
+	重要：
+	Math.random()	返回0-1之间的随机数
+	Math.random()*10+1>>0	返回0-10之间的随机整数

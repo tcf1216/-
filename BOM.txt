@@ -1,0 +1,53 @@
+BOM浏览器对象模型
+
+JavaScript的组成
+	ECMAJavaScript：JavaScript的语法标准
+	BOM：浏览器对象模型
+	DOM：文档对象模型
+
+window对象的常用属性
+	history：浏览器窗口历史记录
+	location：浏览器窗口的访问地址信息
+	navigator：浏览器版本信息
+	screen：用户屏幕信息
+
+window对象的常用方法
+	alert()	显示警告对话框
+	confirm()	显示确认对话框
+	prompt()	显示输入对话框
+	open()	打开新的浏览器窗口
+	close()	关闭浏览器窗口
+	setTimeout()	单次定时器
+	setInterval()	周期性定时器
+	clearTimeout()	清除单次定时器
+	clearInterva()	清除周期性定时器
+
+history对象
+	history的常用属性
+		length：浏览器历史列表中的URL数量
+	history的常用方法
+		back():加载浏览器历史列表的前一个URL
+		forward()：加载浏览器历史列表中的下一个URL
+		go()：加载浏览器历史列表中的下一个URL
+
+location对象
+	location对象常用的属性
+		href：设置或返回当前URL		//http://127.0.0.1:8848/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/js%E5%9F%BA%E7%A1%80/js/BOM.html
+		hash：设置或者返回URL中的锚名	/#/
+		host：设置或返回主机名和端口号	/127.0.0.1:8848
+		port：设置或返回端口号		:8848
+		hostname：设置或返回主机名		/127.0.0.1
+		pathname：设置或返回URLDL路径部分
+		protocol：设置或返回URL的协议，计算机通信网络中两台计算机之间进行通信必须共同的遵守规定或规则，
+超文本传输协议（HTML）是一种通信协议、它允许将超文本标记语言（HTML）文档从Web服务器传送到客户端的浏览器		http://
+		search：设置或返回URL的参数部分
+
+	location的常用方法
+		assign()：加载新的文档，和href属性的作用相同
+		reload()：重新加载当前文档
+		replace()：用新的文档替换当前文档，不产生历史记录
+	screen对象的常用属性
+		width：屏幕当前分辨率的宽度
+		height：屏幕当前分辨率的高度
+		availWidth：屏幕当前分辨率的宽度，不包括任务栏
+		availHeight：屏幕当前分辨率的高度，不包括任务栏

@@ -1,0 +1,89 @@
+对象的结构：
+	var a ={
+		属性名：属性值，		//对象中的属性
+		name:"tcf",
+		age:21,
+		sex:"男"
+		}
+
+
+对象的增删改查：
+	查： 对象名.属性名
+	例：a.age
+
+	改：对象名.属性名=新的值
+	例：a.age=20
+
+	增：对象名.新属性名=值
+	例：a.like="玩游戏"
+
+	删：delete 对象名.属性名
+	例：delete a.sex
+
+
+数组的结构：
+	var a =[1,2,3,4,5]			//数组中的元素
+
+遍历数组：将数组中的每一个元素，挨个进行操作，称之为“遍历数组”，使用for循环遍历数组：
+	for(var i=0;i<a.length;i++){
+		console.log(a[i])
+	}
+
+数组的常用方式
+	concat()	合并数组
+		var a=[1,2]
+		var b=[3,4]
+		var c;
+		c=a.concat(b)
+		console.log(c)	//	[1,2,3,4]
+
+	join()	数组转字符串
+		转成字符串后，默认会以逗号隔开
+		var a=[1,2]
+		a.join()
+		console.log(a)	//	1,2
+		a.join("-")
+		console.log(a)	//	1-2
+		转成字符串后，默认会以逗号分隔，可自定义分隔符：a.join("-")
+
+	pop()	删除并返回数组的最后一个元素
+		var a=[1,2,3,4]
+		a.pop()
+		console.log(a)	//	[1,2,3]
+		var b=a.pop()	//	b=4
+
+	push	向数组末尾添加一个或者多个元素，并返回数组新的长度
+		var a=[1,2,3,4]
+		a.push(5,6,7)
+		console.log(a)	//	[1,2,3,4,5,6,7]
+		console.log(a.push(5,6,7))	//	7
+
+	shift()	删除并返回数组第一个元素
+		var a=[1,2,3,4]
+		a.shift()
+		console.log(a)	//	[2,3,4]
+		console.log(a.shift())	//	1
+	
+	unshift()	向数组前面添加一个或者多个元素，并返回数组新的长度
+		var a=[1,2,3,4]
+		a.unshift(5,6)
+		console.log(a)	//	[5,6,1,2,3,4]
+		console.log(a.unshift(5,6))	//	6
+
+	reverse()	颠倒数组中的元素
+		var a=[1,2,3,4]
+		a.reverse()
+		console.log(a)	//	[4,3,2,1]
+
+	slice()	截取数组
+		返回一个截取的新数组，原数组不变
+		var a=[1,2,3,4]
+		b=a.slice(2,4)
+		console.log(b)	//	[3,4]
+		console.log(a)	//	[1,2,3,4]
+
+	indexOf()	检索数组中是否包含某元素，返回元素的下标，如果不存在则返回-1
+
+	splice()	删除元素，并向数组添加新元素，并返回删除后的数组
+		splice(a,b)
+		从a位置开始删除，删除b个，如果b参数省略则从开始位置删除到最后

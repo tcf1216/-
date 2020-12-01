@@ -1,0 +1,21 @@
+事件
+特定的行为触发对应的方法，即是“事件”
+
+常见的JS事件
+onchange		内容改变事件
+onmouseover	鼠标移入事件
+onmouseout	鼠标移出事件
+onkeydown	键盘按下事件（window事件）
+onload		页面加载完毕事件
+onclick		点击事件
+
+onUnload		当界面关闭后触发（window事件）
+onblur		失去焦点时触发
+onfocus		获得焦点时触发
+onmousedown	当鼠标按下时触发
+onmouseup	当鼠标弹起的时候触发
+onmousemove	当鼠标移动时触发
+onselect		当文本框的文本选中时触发
+onkeyup		当键盘弹起时触发
+onsubmit		当form表单提交时触发
+onreset		当重置form表单时触发
